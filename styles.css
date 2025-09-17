@@ -2,12 +2,19 @@
     --primary-color: #0b3954;
     --secondary-color: #ff6663;
     --content-background-color: #bfd7ea;
+
+    --sidebar-text-color: white;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+li{
+    list-style-type: none;
+    padding: 0.3rem;
 }
 
 .content {
@@ -19,8 +26,37 @@
 
 .sidebar {
     grid-row: 1 / -1;
-    background-color: var(--primary-color)
+    background-color: var(--primary-color);
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 4fr;
+    justify-items: flex-start;
+    align-items: center;
+
+    padding: 1.5rem;
 }
+
+.sidebar-header {
+    color: var(--sidebar-text-color);
+    font-size: 2rem;
+    padding: 0.3rem;
+}
+
+.sidebar ul {
+    color: var(--sidebar-text-color);
+    font-size: 1.5rem;
+}
+
+.sidebar-nav {
+    grid-row: 2 / 3;  
+}
+
+.sidebar-settings {
+    grid-row: 3 / -1;
+    align-self: flex-start;
+    padding-top: 1.5rem;
+}
+
 
 .header {
     grid-column: 2 / -1;
