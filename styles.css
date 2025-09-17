@@ -61,6 +61,60 @@ li{
 .header {
     grid-column: 2 / -1;
     background-color: var(--secondary-color);
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.search-bar {
+    justify-items: center;
+    align-self: center;
+}
+
+.search-bar > form > input{
+    background-color: #D3D3D3;
+    border-radius: 20px;
+    border: none;
+
+    height: 4vh;
+    width: 30vw;
+    font-size: 1.5rem;
+
+    padding: 1rem;
+    text-align: right;
+}
+
+.search-bar > form > input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px 3px var(--primary-color);
+}
+
+.profile {
+    grid-area: 1 / 2 / 2 / -1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.profile > p:first-of-type,
+.profile-picture {
+    justify-self: flex-end;
+}
+
+.profile-picture {
+    width: 3rem;
+    height: 3rem;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.profile > p {
+    font-size: 2rem;
+    justify-self: center
 }
 
 .main-content {
