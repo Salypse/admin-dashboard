@@ -63,13 +63,15 @@ li{
     background-color: var(--secondary-color);
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
 }
 
 .search-bar {
-    justify-items: center;
+    justify-items: flex-start;
     align-self: center;
+
+    padding: 1rem;
 }
 
 .search-bar > form > input{
@@ -94,15 +96,19 @@ li{
     grid-area: 1 / 2 / 2 / -1;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
 
     justify-items: center;
     align-items: center;
 }
 
-.profile > p:first-of-type,
-.profile-picture {
+.profile-icons {
+    grid-column: 1 / 2;
     justify-self: flex-end;
+
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
 }
 
 .profile-picture {
@@ -115,6 +121,43 @@ li{
 .profile > p {
     font-size: 2rem;
     justify-self: center
+}
+
+.user-info {
+    grid-area: 2 / 1 / -1 / 2;
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+}
+
+.user-greeting {
+    align-self: center;
+    padding: 1rem;
+    padding-left: 0;
+
+    grid-column: 2 / -1;
+}
+
+.user-greeting > p:first-of-type {
+    font-size: 1.25rem;
+}
+
+.user-greeting > p:last-of-type {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.user-picture {
+    grid-column: 1 / 2;
+    justify-self: center;
+    align-self: center;
+
+     /*When icon is added, make width an height for icon */
+    width: 5rem;
+    height: 5rem;
+    background-color: yellow;
+    border-radius: 50%;
 }
 
 .main-content {
