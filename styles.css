@@ -218,6 +218,29 @@ li{
 
 .projects {
     grid-row: 2 / -1;
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.projects-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border-left: 0.5rem solid var(--primary-color);
+    padding: 1rem;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    align-items: flex-end;
 }
 
 .announcements {
