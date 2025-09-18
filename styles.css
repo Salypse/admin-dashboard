@@ -251,4 +251,41 @@ li{
 
 .trending {
     grid-row: 4 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.trending-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.trending-picture {
+    grid-area: 1 / 1 / -1 / 2;
+
+    background-color: green;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.trending-name {
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    align-self: flex-end;
+    
+    padding-bottom: 0.5rem;
+}
+
+.trending-project {
+    align-self: flex-start;
 }
