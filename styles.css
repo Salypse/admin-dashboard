@@ -307,16 +307,15 @@ img {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.trending-picture {
+.trending-card img{
     grid-area: 1 / 1 / -1 / 2;
-
-    background-color: green;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
 
     justify-self: center;
     align-self: center;
+
+    height: 4rem;
+    width: 4rem;
+    margin-left: 1rem;
 }
 
 .trending-name {
